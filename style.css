@@ -28,7 +28,7 @@ body {
 }
 
 .menu {
-    flex-flow: auto;
+    flex-flow: row auto;
     display: flex;
     list-style: none; /*tira a bolinha*/
     gap: 2rem; /*distancia entre os itens*/
