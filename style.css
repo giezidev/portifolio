@@ -16,7 +16,6 @@
 body {
     background-color: var(--color3);
     color: var(--color5);
-    margin: auto;
 }
 
 .navegacao {
@@ -26,11 +25,10 @@ body {
     width: 100%; /*largura em todo o top*/
     z-index: 100; /*sempre acima do conteúdo*/
     padding: 2rem;
-    
 }
 
 .menu {
-    flex: 1 0 100% ;
+    flex-flow: row wrap;
     height: 100%;
     display: flex;
     list-style: none; /*tira a bolinha*/
@@ -39,8 +37,7 @@ body {
 }
 
 li a {
-    border: 2px solid black;
-    padding: 10px 15px;
+    padding: 10px;
     border-radius: 15px;
 }
 
@@ -55,9 +52,11 @@ li > a:hover {
 }
 
 .foto {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    width: 100%; /*a imagem se adapta ao espaço disponível*/
+    max-width: 300px; /*não fica gigante demais*/
+    height: auto; /*mantém proporcional*/
+    border-radius: 50%; /*a imagem fica redonda*/
+    margin: 0 5px;
     box-shadow: 0 0 70px var(--color2);
     animation: flutuar 5s ease-in-out infinite; /*(flutuar) pegou o nome configurado no @keyframes com uma animação suave de 5s infinita*/
 }
@@ -71,13 +70,14 @@ li > a:hover {
     }
 }
 
-.start {
+.inicio {
     justify-content: center;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 25px;
     padding-top: 200px;
+    margin: auto;
 }
 
 strong {
