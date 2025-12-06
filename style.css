@@ -9,11 +9,16 @@
 
 
 :root {
-    --color2: #007c11c2;
+    --color2: #3100b8c2;
+    --color4: #4b02be;
     --color3 :#000000fa;
     --color5: #dbdbdb;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /*faz com que quando eu clique nas opções do menu, a tela fique exatamente em cima os id´s programados, criando uma caixa invisivel do tamanho do menu superior e não deixe ele cobrir os id´s*/
+  }
 
 body {
     background-color: var(--color3);
@@ -45,7 +50,8 @@ li a {
     padding: 10px;
     border-radius: 15px;
     text-decoration: none;
-    color: #000;
+    color: var(--color5);
+    border: 2px solid var(--color5);
 }
 
 
@@ -63,7 +69,7 @@ li > a:hover {
     border-radius: 50%; /*a imagem fica redonda*/
     display: block;
     margin: 0 5px;
-    box-shadow: 0 0 70px var(--color2);
+    box-shadow: 0 0 70px var(--color4);
     animation: flutuar 5s ease-in-out infinite; /*(flutuar) pegou o nome configurado no @keyframes com uma animação suave de 5s infinita*/
 }
 
@@ -88,7 +94,7 @@ li > a:hover {
 
 
 strong {
-    color: var(--color2);
+    color: var(--color4);
 }
 
 
@@ -141,7 +147,7 @@ h1 {
 
 
 .cards {
-    width: 100%;
+    width: 80%;
     max-width: 400px;
     margin: 0 5px;
     align-items: center;
